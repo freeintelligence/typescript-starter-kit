@@ -18,5 +18,13 @@
   },
   "keywords": [],
   "author": "",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/freeintelligence/typescript-starter-kit.git"
+  },
+  "bugs": {
+    "url": "https://github.com/freeintelligence/typescript-starter-kit/issues"
+  },
+  "homepage": "https://github.com/freeintelligence/typescript-starter-kit#readme",
   "license": "ISC"
 }

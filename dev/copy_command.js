@@ -14,7 +14,8 @@ class CopyCommand extends BaseCommand {
 
     this.files = [
       'package.json',
-      'readme.md'
+      'readme.md',
+      'nalv.json'
     ]
   }
 

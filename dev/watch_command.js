@@ -1,6 +1,6 @@
 const { BaseCommand, Scheduler } = require('task-scheduling')
 const { CopyCommand } = require('./copy_command')
-const fs = require('fs-extra')
+const watch = require('node-watch')
 const path = require('path')
 
 const tsconfig = require('./../tsconfig.json')
@@ -19,13 +19,10 @@ class WatchCommand extends BaseCommand {
   async run() {
     await this.execute('build')
 
-    fs.watch(tsconfig.compilerOptions.baseUrl, async (event, filename) => await this.execute('build'))
+    watch(tsconfig.compilerOptions.baseUrl, { recursive: true }, async (event, filename) => await this.execute('build'))
 
     for(let i = 0; i < this.files.length; i++) {
-      const file = this.files[i]
-      fs.watch(path.join(file), async (event, filename) => {
-        await this.execute('copy')
-      })
+      watch(path.join(this.files[i]), { }, async (event, filename) => await this.execute('copy'))
     }
   }
 

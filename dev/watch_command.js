@@ -1,4 +1,5 @@
-const { BaseCommand, Scheduler } = require('task-scheduling')
+const { BaseCommand } = require('task-scheduling')
+const { Scheduler } = require('./helpers/scheduler')
 const { CopyCommand } = require('./copy_command')
 const watch = require('node-watch')
 const path = require('path')

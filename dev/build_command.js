@@ -1,5 +1,6 @@
-const { BaseCommand, Scheduler } = require('task-scheduling')
+const { BaseCommand } = require('task-scheduling')
 const { red } = require('colors')
+const { Scheduler } = require('./helpers/scheduler')
 const { spawn } = require('./helpers/spawn_promise')
 const tsconfig = require('./../tsconfig.json')
 

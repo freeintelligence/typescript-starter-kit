@@ -7,8 +7,8 @@
     "@types/node": "^11.13.6",
     "colors": "^1.3.3",
     "fs-extra": "^7.0.1",
-    "task-scheduling": "^1.0.0-rc.3",
     "node-watch": "^0.6.2",
+    "task-scheduling": "^1.0.0-rc.10",
     "typescript": "^3.4.4"
   },
   "scripts": {
@@ -17,8 +17,16 @@
     "copy": "node dev.js copy",
     "watch": "node dev.js watch"
   },
-  "keywords": [],
-  "author": "",
+  "keywords": [
+    "node",
+    "nodejs",
+    "typescript",
+    "ts"
+  ],
+  "author": {
+    "name": "FreeIntelligence",
+    "email": "free04381@gmail.com"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/freeintelligence/typescript-starter-kit.git"

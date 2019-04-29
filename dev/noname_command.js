@@ -1,4 +1,5 @@
-const { BaseCommand, Flag, Scheduler } = require('task-scheduling')
+const { BaseCommand, Flag } = require('task-scheduling')
+const { Scheduler } = require('./helpers/scheduler')
 
 class NoNameCommand extends BaseCommand {
 

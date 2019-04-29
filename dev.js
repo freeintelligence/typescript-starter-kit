@@ -1,4 +1,4 @@
-const { Scheduler } = require('task-scheduling')
+const { Scheduler } = require('./dev/helpers/scheduler')
 const { NoNameCommand } = require('./dev/noname_command')
 const { WatchCommand } = require('./dev/watch_command')
 const { BuildCommand } = require('./dev/build_command')
@@ -13,4 +13,6 @@ Scheduler.registerCommand(new CopyCommand())
 Scheduler.registerCommand(new WatchCommand())
 
 // Run
-Scheduler.executeByProcess()
+Scheduler.executeByProcess().catch(err => {
+  console.log(err)
+})
